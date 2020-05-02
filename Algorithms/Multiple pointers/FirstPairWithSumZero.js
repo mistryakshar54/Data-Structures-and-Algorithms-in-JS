@@ -1,7 +1,7 @@
 //Given a sorted array of intergers, find the first pair with sum equals to 0
 //O(N) solution + O(1) space
 
-const firstPairWithSumZero = (arr) => {
+export const firstPairWithSumZero = (arr) => {
     //define two pointers start (starting from start) and end(starting from the end).
     let start = 0 , end = arr.length - 1;
     while(start < end)
