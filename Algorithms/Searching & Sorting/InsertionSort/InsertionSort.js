@@ -1,5 +1,5 @@
 //Insertion sort
-//O(N) Solution
+//O(N^2) Solution
 
 const insertionSort = ( arr ) => {
 
