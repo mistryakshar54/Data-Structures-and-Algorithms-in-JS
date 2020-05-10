@@ -22,19 +22,29 @@
  */
 
  const plusOne = (arr) => {
-     for (let index = arr.length - 1; index>=0; index--) {
-         if( arr[index] === 9 ){
-             arr[index] = 0;
+       let hasPreceedingZero = false;
+         for (let index = A.length - 1; index>=0; index--) {
+         if( A[index] === 9 ){
+             A[index] = 0;
          }
          else{
-             arr[index] = arr[index] + 1;
-             return arr;
+             A[index] = A[index] + 1;
+             if(A[0] === 0) { 
+                 hasPreceedingZero = true;break;
+             }else{
+                return A;
+             }
          }
      }
-     arr.unshift(1);
-     return arr;
+    if(hasPreceedingZero){
+        while( A[j] !== 0 ){A.shift(1);}
+        return A;
+     }
+     A.unshift(1);
+     return A;
  }
 
  console.log(plusOne([4, 3, 2, 1]));
  console.log(plusOne([9,9,9,9]));
  console.log(plusOne([0,9,9,9,9]));
+ console.log(plusOne([0,6,0,9,9,9,2]));
