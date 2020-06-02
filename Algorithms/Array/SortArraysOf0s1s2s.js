@@ -31,4 +31,29 @@ const sort0s1s = ( A ) => {
 console.log(  sort0s1s([ 1, 0 , 0, 2, 1, 0 ,2, 1   ]) )
 console.log(  sort0s1s([ 1,0,0,2,2,0,1   ]) )
 
+
+// Approach 2
+const Sort0s1sAgain = ( A ) => {
+    let  m = 0, l = 0 , h = A.length - 1;
+    while(m < h){
+        if(A[m] === 0){
+            let temp = A[m];
+            A[m] = A[l];
+            A[l] = temp;
+            m++ , l++;
+        }
+        if( A[m] === 1 ){ 
+            m++; 
+        }
+        if( A[m] === 2){
+            let temp = A[m];
+            A[m] = A[h];
+            A[h] = temp;
+            h--;
+        }
+    }   
+    return A;
 }
+
+console.log(Sort0s1sAgain([1, 0, 0, 2, 1, 0, 2, 1]));
+console.log(Sort0s1sAgain([1, 0, 0, 2, 2, 0, 1]));
