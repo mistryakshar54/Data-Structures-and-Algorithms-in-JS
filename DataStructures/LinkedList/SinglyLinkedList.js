@@ -59,6 +59,19 @@ class NodeItem{
         }
         console.log("Middle Node:", midPointer.val);
     }
+
+    reverseList(){
+        let nextPointer = null;
+        let prevPointer = null;
+        let currPointer = this.head;
+        while (currPointer != null) {
+          nextPointer = currPointer.next;
+          currPointer.next = prevPointer;
+          prevPointer = currPointer;
+          currPointer = nextPointer
+        }
+        this.head = prevPointer;
+    }
 }
 let llist = new SinglyLinkedList();
 llist.push(1);
@@ -70,4 +83,6 @@ llist.push(6);
 llist.pop();
 llist.traverse();
 llist.findMiddleNode();
+llist.reverseList();
+llist.traverse();
 module.exports = SinglyLinkedList;
