@@ -1,12 +1,25 @@
 class Stack{
     constructor( stackLength = 5){
         this.top = -1;
-        this.stackArr = [stackLength];
+        this.stackArr = Array(stackLength).fill(0);
     }
 
-    push = ( value ) => this.stackArr.push(value);
+    push = ( value ) => {
+        this.top++;
+        this.stackArr[this.top] = value;
+    }
     
-    pop = ( ) => this.stackArr.pop();
+    peek = () => this.stackArr[this.top];
+
+    isEmpty = () => this.top === -1 ? true : false
+    
+    isFull = () => this.top === this.stackArr.length ? true : false
+
+    pop = ( ) => {
+        const poppedItem = this.stackArr[this.top];
+        this.top--;
+        return poppedItem;
+    };
 
     traverse = () => {
         console.log("\n***");
@@ -15,12 +28,4 @@ class Stack{
     }
 }
 
-const stack = new Stack();
-stack.push(4);
-stack.push(3);
-stack.push(0);
-stack.traverse();
-stack.pop();
-stack.push(9);
-stack.pop();
-stack.traverse();
+module.exports = Stack;
