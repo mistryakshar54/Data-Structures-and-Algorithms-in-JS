@@ -32,7 +32,13 @@ console.log(  sort0s1s([ 1, 0 , 0, 2, 1, 0 ,2, 1   ]) )
 console.log(  sort0s1s([ 1,0,0,2,2,0,1   ]) )
 
 
-// Approach 2
+// Solution Approach 2
+// Take 3 pointers m , l ,h 
+// l takes care of zeros , m checks for 1
+// If m is 0 then we swap with A[l] as l points to 0s
+// If m is 1 , we move ahead as M always points to 1
+// If m is 2 , then we swap with h as h handles all 2s
+
 const Sort0s1sAgain = ( A ) => {
     let  m = 0, l = 0 , h = A.length - 1;
     while(m < h){

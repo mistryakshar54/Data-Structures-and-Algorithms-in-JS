@@ -1,5 +1,8 @@
 //Given a sorted array of intergers, find the first pair with sum equals to 0
-//O(N) solution + O(1) space
+//O(LogN) solution + O(1) space
+
+// Solution Approach : Have two pointers , one from start and another from end and check if sum is 0. If sum is > 0 
+// the right one descrements else the left most increments 
 
 export const firstPairWithSumZero = (arr) => {
     //define two pointers start (starting from start) and end(starting from the end).

@@ -2,6 +2,11 @@
 //For [1,2,5,2,8,1,5] , 2 => 10  - 2 numbers having max sum [2,8]
 //For [1,2,5,2,8,1,5] , 4 => 17  - 4 numbers having max sum [2,5,2,8]
 
+
+//Solution Approach : 
+// Create a window untill N elements and calculate the sum uptill that element.
+// Now slide the window by N elements and get the max of the new sum( the one with the new added element) and the old sum.
+
 // 0(N) Solution
 const maxSubArraySumOptimized = ( arr , n ) => {
     if( arr.length === 0 ) { return null; }
