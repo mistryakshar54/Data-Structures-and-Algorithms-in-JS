@@ -22,3 +22,22 @@ const intersection = ( A , B ) => {
 }
 
 console.log(intersection(A, B));
+
+
+//Instersection result without duplicates:
+var intersection = function(nums1, nums2) {
+  const mp = new Map();
+  const resultArr = [];
+  for( let i =0; i < nums1.length; i++ ){
+      if( !mp.has( nums1[i] ) ){
+          mp.set( nums1[i] , 0 );
+      }
+  }
+  for( let i = 0; i < nums2.length; i++ ){
+      if( mp.has( nums2[i] ) && mp.get(nums2[i]) === 0){
+        resultArr.push( nums2[i] );   
+        mp.set(nums2[i] , -1);
+      }
+  }
+  return resultArr;
+};
