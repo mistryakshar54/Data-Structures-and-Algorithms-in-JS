@@ -1,5 +1,3 @@
-const { walkUpBindingElementsAndPatterns } = require("typescript");
-
 class NodeItem{
     constructor( val ) {
         this.val = val;
@@ -73,16 +71,17 @@ class NodeItem{
         this.head = prevPointer;
     }
 }
-let llist = new SinglyLinkedList();
-llist.push(1);
-llist.push(2);
-llist.push(3);
-llist.push(4);
-llist.push(5);
-llist.push(6);
-llist.pop();
-llist.traverse();
-llist.findMiddleNode();
-llist.reverseList();
-llist.traverse();
+//Sample linked list :
+// let llist = new SinglyLinkedList();
+// llist.push(1);
+// llist.push(2);
+// llist.push(3);
+// llist.push(4);
+// llist.push(5);
+// llist.push(6);
+// llist.pop();
+// llist.traverse();
+// llist.findMiddleNode();
+// llist.reverseList();
+// llist.traverse();
 module.exports = SinglyLinkedList;
