@@ -1,7 +1,7 @@
 //Given an array arr of N integers. Find the contiguous sub-array with maximum sum.
 //Also called as Kadane's Algorithm
 //O(N) approach
-
+//Kadane's Algorithm
 //Solution approach : for all elements of an array check the max between  item or sum + that item and check the same globally
 const MaxContiguousSumSubArr = ( A ) => {
     let localSum = A[0],globalSum = A[0];

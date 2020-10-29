@@ -1,4 +1,7 @@
 //Finding intersecting point in two linked list
+
+// e.g.   [1,2,3,7,8] and [4,5,6 ] and 6 points to 7 in list 1 then 7 is the intersection point
+
 const SinglyLinkedList = require('../../DataStructures/LinkedList/SinglyLinkedList');
 const Stack = require('../../DataStructures/Stack/StackUsingArray');
 
