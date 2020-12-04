@@ -18,7 +18,7 @@
 //     -> Push the current element in the stack
 // -> For all the left items in the stack, there was no greater value at the right. So pop them up and print NGE as -1
 
-const Stack = require('../../DataStructures/Stack/StackUsingArray'); //A stack using array
+const Stack = require('../../../../DataStructures/Stack/StackUsingArray'); //A stack using array
 
 const NextGreaterElement = ( A ) => {
     const tempStack = new Stack(A.length);
