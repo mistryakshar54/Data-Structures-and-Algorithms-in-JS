@@ -1,5 +1,9 @@
 //Anagram Check!!
 //Given two strings check if second string is an anagram of the first
+
+// An anagram is a word or phrase formed by rearranging the letters of a different word 
+// or phrase, typically using all the original letters exactly once
+
 //O(N) solution
 const isValidAnagram = (string1, string2) => {
   let mapObj = {};
