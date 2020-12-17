@@ -11,8 +11,8 @@
 // Print the element and recur
 // After the recur pop the last element 
 
-//      |  A   |  B  |  C |
-//       B   C    C
+//      |   A   |    B  |  C |
+//      | B   C |  C    |
 //    C
 
 var allSubsequence = ( s , currStr , i ) => {
