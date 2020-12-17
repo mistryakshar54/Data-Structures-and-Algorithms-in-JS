@@ -22,7 +22,7 @@
 // Increment the end index and the current length and max length
 
 var lengthOfLongestSubstring = function(s) {
-    let st = 0, end = 0, currLen = 0, maxLen = 0;
+    let st = 0, end = 0, maxLen = 0;
     let mp = new Map();
     for( let i = 0; i < s.length; i++ ){
         if(  mp.has(s[i]) ){
@@ -30,10 +30,12 @@ var lengthOfLongestSubstring = function(s) {
         }
         mp.set( s[i] , i );
         end++;
-        currLen = Math.max( currLen , end - st );
-        maxLen = Math.max( currLen , maxLen );
+        maxLen = Math.max( maxLen , end - st );
     }
+    console.log(end, st);
     return maxLen;
 };
 
-lengthOfLongestSubstring("abcabcbb")
+console.log(lengthOfLongestSubstring("aabcbcdbca"))
+lengthOfLongestSubstring("bbbbb")
+lengthOfLongestSubstring("tmmuxbt")
