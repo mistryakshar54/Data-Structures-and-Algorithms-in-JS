@@ -1,5 +1,5 @@
 //Given an array count the number of inversions:
-
+// Inversions determine the total no of elements that are smaller than the prev elements
 const countInversions =  ( arr ) => {
     let inverseCnt = 0;
     arr.forEach((element,index) => {

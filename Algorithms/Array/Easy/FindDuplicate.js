@@ -12,32 +12,15 @@
 
 // If there is no duplicate, output -1
 
-// TODO: Remove the hacky n
 const findDupe = (A) => {
-    const dupeObj = {};
-    for (let start = 0, end = A.length - 1;
-         start <= end ;
-         start++ , end--) 
-    {
-        if( dupeObj[ `n${A[start]}` ] ){
-            dupeObj[`n${A[start]}`] += 1; 
-        }   
-        else{
-            dupeObj[`n${A[start]}`] = 1;
-        }
-
-        if (dupeObj[`n${A[end]}`]) {
-          dupeObj[`n${A[end]}`] += 1;
-        } else {
-          dupeObj[`n${A[end]}`] = 1;
-        }
+  const st = new Set();
+  for (let index = 0; index < A.length; index++) {
+    if(st.has(A[index])){
+      return A[index];
     }
-    for (const key in dupeObj) {
-      if (dupeObj[key] > 1) {
-        return parseInt(key.replace('n','')); //Hacky way but for some reason 25 is treated as 2 in obj therby increaseing the count for wront no.
-      }
-    }
-    return -1;
+    st.add(A[index]);
+  }
+  return -1;
 }
 
 console.log(

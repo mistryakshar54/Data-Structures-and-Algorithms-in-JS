@@ -1,3 +1,5 @@
+// Given an array A and Target T, count the no of pairs possible with the given target
+// For ex. for arr [1,1,1,1] with target 2 there are 7 pairs possible
 const countPairsWithTargetSum = ( arr, target ) => {
     pairCount = 0;
     const mp = new Map();
