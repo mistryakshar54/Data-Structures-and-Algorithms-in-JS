@@ -9,6 +9,8 @@ class Stack{
         this.stackArr[this.top] = value;
     }
     
+    size = () => this.stackArr.length;
+    
     peek = () => this.stackArr[this.top];
 
     isEmpty = () => this.top === -1 ? true : false
